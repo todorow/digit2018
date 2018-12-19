@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0c658a-2843-4650-860d-aa050ece3e10" name="Default Changelist" comment="" />
+    <list default="true" id="6a0c658a-2843-4650-860d-aa050ece3e10" name="Default Changelist" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Event.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/detector.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/donor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/donor.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +32,8 @@
           <entry key="css" value="69" />
           <entry key="html" value="434" />
           <entry key="json" value="4" />
-          <entry key="ts" value="1770" />
-          <entry key="txt" value="152" />
+          <entry key="ts" value="1773" />
+          <entry key="txt" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -36,8 +41,8 @@
           <entry key="CSS" value="69" />
           <entry key="HTML" value="434" />
           <entry key="JSON" value="4" />
-          <entry key="PLAIN_TEXT" value="152" />
-          <entry key="TypeScript" value="1770" />
+          <entry key="PLAIN_TEXT" value="157" />
+          <entry key="TypeScript" value="1773" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -53,7 +58,7 @@
           <entry key="html" value="10" />
           <entry key="json" value="6" />
           <entry key="md" value="1" />
-          <entry key="ts" value="51" />
+          <entry key="ts" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -62,7 +67,7 @@
           <entry key="HTML" value="10" />
           <entry key="JSON" value="6" />
           <entry key="Markdown" value="1" />
-          <entry key="TypeScript" value="51" />
+          <entry key="TypeScript" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -74,13 +79,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="150">
+              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/donor.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,7 +142,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/model/marker.ts" />
         <option value="$PROJECT_DIR$/src/model/user.ts" />
-        <option value="$PROJECT_DIR$/src/model/donor.ts" />
         <option value="$PROJECT_DIR$/src/model/event.ts" />
         <option value="$PROJECT_DIR$/src/app/components/map/map.component.css" />
         <option value="$PROJECT_DIR$/src/model/Problem.ts" />
@@ -143,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/info-side/info-side.component.html" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/src/model/donor.ts" />
       </list>
     </option>
   </component>
@@ -191,6 +208,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DIGIT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DIGIT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -201,7 +224,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545260257584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545263117695" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/maps" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -258,7 +281,7 @@
       <workItem from="1545153073405" duration="14303000" />
       <workItem from="1545218812975" duration="7034000" />
       <workItem from="1545249416448" duration="8997000" />
-      <workItem from="1545261080467" duration="167000" />
+      <workItem from="1545261080467" duration="1520000" />
     </task>
     <task id="LOCAL-00001" summary="inn">
       <created>1544953669466</created>
@@ -316,11 +339,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545224472460</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init">
+      <created>1545261268765</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545261268765</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45445000" />
+    <option name="totallyTimeSpent" value="46798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,7 +363,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="708" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20833333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -343,19 +372,19 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32871974" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924242" weight="0.32871974" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32871974" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" weight="0.39965397" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4969697" visible="true" weight="0.39965397" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871974" />
       <window_info anchor="bottom" id="Docker" order="7" weight="0.32871974" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.8590909" weight="0.41379312" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4969697" weight="0.4013841" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" visible="true" weight="0.32871974" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49621212" weight="0.4013841" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5030303" side_tool="true" weight="0.39965397" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32871974" />
-      <window_info anchor="bottom" id="TypeScript" order="13" sideWeight="0.49848485" visible="true" weight="0.32871974" />
+      <window_info anchor="bottom" id="TypeScript" order="13" sideWeight="0.49848485" weight="0.32871974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,7 +489,8 @@
     <MESSAGE value="models" />
     <MESSAGE value="map component" />
     <MESSAGE value="modification on map comp and added bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification on map comp and added bootstrap" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -499,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/donor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -586,6 +609,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="27" selection-start-column="27" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#agm-map#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -638,6 +667,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -677,10 +709,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/donor.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
