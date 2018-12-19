@@ -1,0 +1,42 @@
+<ng-template #content let-modal>
+  <div class="container-modal">
+      <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Станете учесник!</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group ">
+              <div class="input-group">
+                <span class="input-group-addon"><img src="../../../assets/Icons/envelope.png"/></span>
+                <input id="email" class="form-control" type="email" placeholder="Email" name="dp">
+              </div>
+              <div class="input-group">
+                  <span class="input-group-addon"><img src="../../../assets/Icons/user-black.png"/></span>
+                  <input id="email" class="form-control" type="password" placeholder="Password" name="dp">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label>Remember me</label>
+                </div>
+            </div>
+
+            <div >
+                <button type="button" class="btn btn-lg btn-outline-info" (click)="modal.close('Save click')">Save</button>
+            </div>
+
+          </form>
+        </div>
+  </div>
+</ng-template>
+
+<button class="btn btn-md btn-outline-light" (click)="open(content)" id="signInButton" >
+  <span><img src="../..//../assets/Icons/user.png" alt="login"></span> 
+  Најави се
+</button>
+
+<pre>{{closeResult}}</pre>   

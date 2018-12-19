@@ -1,0 +1,26 @@
+<button>Додади настан</button>
+<!--<div >-->
+<!--<form autocomplete="off" novalidate [formGroup]="form">-->
+<!--<input type="text" formControlName="imeNaPole"/>-->
+<!--<button (click)="getValue()">Потврди настан</button>-->
+<!--</form>-->
+<!--</div>-->
+
+
+<div>
+  <h1>Листа на тековни настани</h1>
+  <ul class="events">
+
+    <li *ngFor="let event of events"
+        [class.selected]="event === selectedEvent"
+        (click)="onSelected(event)">
+      <h2>{{event.name}}</h2>
+      <div><span>Локација: </span>{{event.location}}</div>
+      <div><span>Датум: </span>{{event.date}}</div>
+      <div><span>Време: </span>{{event.time}}</div>
+      <div><span>Опис: </span>{{event.description}}</div>
+      <br/>
+    </li>
+
+  </ul>
+</div>

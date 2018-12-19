@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+  <div class="row  bg-danger" style="height: 100%">
+    <div class="col-2 " style="height: 100%">
+      <div class="btn bg-dark" (click)="onSave()">dasdasdas</div>
+    </div>
+    <div class="col-10 " style="height: available">
+      <agm-map style="height: available" [(latitude)]="location.lat" [(longitude)]="location.lng"
+               [(zoom)]="location.zoom" [disableDefaultUI]="false"
+               [zoomControl]="true" [(fitBounds)]='location.viewport'>
+        <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng"
+                    [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)'></agm-marker>
+
+        <div *ngIf="problemsLocations!=null">
+          <agm-circle *ngFor="let circle of problemsLocations" [latitude]="circle.lat" [longitude]="circle.lng"
+                      [(radius)]="circleRadius"
+                      [fillColor]="'pink'"
+                      [circleDraggable]="false"
+                      [editable]="false" (circleClick)="onPrint($event)">
+
+
+          </agm-circle>
+        </div>
+
+      </agm-map>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+

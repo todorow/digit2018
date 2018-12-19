@@ -1,0 +1,25 @@
+.container-modal{
+
+    background-color: white;
+}
+
+#email{
+    border: none;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.input-group{
+  margin: 5px;
+}
+
+#signInButton span{
+    margin-right: 10px;
+    margin-bottom: 4px;
+}
+
+#signInButton:hover{
+    background-color: #464646;
+    opacity: 20%;
+    color: white;
+}
