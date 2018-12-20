@@ -18,14 +18,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 
 /* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {
+@media (max-width: 544px) {
 
 }
 
 /* Medium devices (tablets, 768px and up)
 The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
-
+@media (max-width: 768px) {
+  .card{
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -55,4 +58,29 @@ Custom media queries
 }
 p{
   margin:0px;
+}
+
+.container{
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.events-title{
+  margin-bottom: 40px;
+  display: flex;
+
+}
+
+.events-title button{
+  margin-left: 40px;
+
+}
+
+.card-height{
+  height: 530px;
+}
+.card-img-height{
+  height: 230px;
 }

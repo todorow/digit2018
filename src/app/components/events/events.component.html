@@ -2,9 +2,8 @@
 
 <div class="container">
 
-  <div>
+  <div class="events-title">
     <h1>Листа на настани</h1>
-
     <button class="btn btn-info float-right" routerLink="/events/add">Додади настан</button>
   </div>
 
@@ -15,16 +14,14 @@
       <li *ngFor="let event of events"
           (click)="onSelected(event)">
 
-        <div class="card flex-container" >
-          <img class="card-img-top img-fluid" src="{{event.image}}" alt="Card image cap">
-          <div class="card-body" style="align-content: center">
+        <div class="card flex-container card-height" >
+          <img class="card-img-top img-fluid card-img-height" src="{{event.image}}" alt="Card image cap">
+          <div class="card-body" style="align-content: center; line-height: 28px">
             <h4 class="card-title d-flex justify-content-center">{{event.name}}</h4>
-            <p class="card-text d-flex justify-content-center">Датум: {{event.date}}</p>
-            <p class="card-text d-flex justify-content-center">Време: {{event.time}}</p>
-            <p class="card-text d-flex justify-content-center">Локација: {{event.location}}</p>
-            <p class="card-text">{{event.description}}</p>
-
-
+            <p class="card-text"><strong>Датум:</strong> {{event.date}}</p>
+            <p class="card-text"><strong>Време:</strong> {{event.time}}</p>
+            <p class="card-text"><strong>Локација: </strong>  {{event.location}}</p>
+            <p class="card-text"><strong>Опис: </strong> {{event.description}}</p>
           </div>
         </div>
 

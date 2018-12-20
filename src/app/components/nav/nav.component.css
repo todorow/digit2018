@@ -16,13 +16,12 @@
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
-
 }
 .nav{
   padding: 0;
   margin: 0;
   height: 54px;
-
+  z-index:1; /*Add this*/
 }
 
 .navbar-inverse .navbar-nav > li > a {
