@@ -9,6 +9,7 @@ body {
   align-content: stretch;
   align-items: stretch;
   height: 100vh;
+  overflow: hidden;
 }
 
 app-root {

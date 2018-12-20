@@ -20,7 +20,7 @@
   padding-left: 0;
   padding-right: 0;
   display: block;
-  height: 100vh;
+  height:94.4%;
 }
 .size{
   display: block;
@@ -31,7 +31,7 @@ app-map{
 }
 app-info-side{
   display: block;
-  height: 100vh;
+  height:100vh;
 
 
 }
