@@ -2,6 +2,10 @@
     background-color: white;
 }
 
+#content{
+  width: 80%;
+}
+
 #email{
     border: none;
     margin-left: 10px;
@@ -21,4 +25,17 @@
     background-color: #464646;
     opacity: 20%;
     color: white;
+
+}
+
+#signInButton a{
+  font-size: 20px;
+}
+
+.input-group{
+  border-bottom:  #464646;
+}
+
+.button-login{
+  width: 300px;
 }

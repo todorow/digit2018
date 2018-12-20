@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -9,7 +9,8 @@ import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalBasicComponent implements OnInit {
   closeResult: string;
-
+  email = faEnvelope;
+  pass = faLock;
   constructor(private modalService: NgbModal) {}
 
   open(content:any) {

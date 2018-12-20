@@ -10,11 +10,13 @@
           <form>
             <div class="form-group ">
               <div class="input-group">
-                <span class="input-group-addon"><img src="../../../assets/Icons/envelope.png"/></span>
-                <input id="email" class="form-control" type="email" placeholder="Email" name="dp">
+                <!--<span class="input-group-addon"><img src="../../../assets/Icons/envelope.png"/></span>-->
+                <span><fa-icon [icon]="email"></fa-icon></span>
+                <input id="mail" class="form-control" type="email" placeholder="Email" name="dp">
               </div>
               <div class="input-group">
-                  <span class="input-group-addon"><img src="../../../assets/Icons/user-black.png"/></span>
+                  <!--<span><img src="../../../assets/Icons/user-black.png"/></span>-->
+                  <span><fa-icon [icon]="pass"></fa-icon></span>
                   <input id="email" class="form-control" type="password" placeholder="Password" name="dp">
                 </div>
             </div>
@@ -25,7 +27,7 @@
                 </div>
             </div>
 
-            <div >
+            <div class="button-login">
                 <button type="button" class="btn btn-lg btn-info" (click)="modal.close('Save click')">Најави се</button>
             </div>
 
