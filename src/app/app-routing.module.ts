@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {path:'home',component:MapComponent},
   {path:'detect',component:MapComponent},
-  {path:'event',component:EventsComponent},
+  {path:'events',component:EventsComponent},
   {path:'heroes',component:HeroesComponent}
 ];
 
