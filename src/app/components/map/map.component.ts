@@ -56,7 +56,7 @@ export class MapComponent implements OnInit {
     this.location.marker.draggable = true;
     this.markerLocation="41.98883,21.42164";
     this.markerLocationService.setCurrentLocation(this.markerLocation);
-    this.problemsLocations = [];
+    this.problemsLocations = this.problemServce.getOnlyId();
 
   }
 
@@ -66,7 +66,7 @@ export class MapComponent implements OnInit {
   onRefresh(property:any){
     this.problemsLocations=this.problemServce.getOnlyId();
     this.isActive=true;
-    console.log(this.problemsLocations);
+    console.log(property);
   }
 
   onPrint(property: any) {

@@ -42,7 +42,7 @@ export class ProblemformComponent implements OnInit {
     this.currentProblem.status=-1;
     this.problemService.addNewProblem(this.currentProblem);
     console.log(this.currentProblem);
-    this.someEvent.emit();
+    this.someEvent.emit(this.currentProblem);
     // this.onSaveProblem();
 
 
