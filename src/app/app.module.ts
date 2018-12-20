@@ -13,6 +13,7 @@ import {InfoSideComponent} from "./components/info-side/info-side.component";
 import {ModalBasicComponent} from "./components/modal-basic/modal-basic.component";
 import { HeroesComponent } from './components/heroes/heroes.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { ProblemformComponent } from './components/problemform/problemform.component';
 
 
 
@@ -26,6 +27,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     EventsComponent,
     EventFormComponent,
     HeroesComponent,
+    ProblemformComponent
   ],
   imports: [
     BrowserModule,

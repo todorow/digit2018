@@ -8,6 +8,17 @@
   padding-right: 0;
 
 }
+app-problem-detector-form{
+  display: block;
+  height: 100vh;
+}
+.containerForInfoAndForm{
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+}
 #containerForMap{
   margin-left: 0;
   margin-right: 0;
@@ -31,7 +42,5 @@ app-map{
 }
 app-info-side{
   display: block;
-  height:100vh;
-
-
+  height: 100vh;
 }

@@ -4,6 +4,7 @@ import {GoogleMapsAPIWrapper} from '@agm/core/services';
 import {Location} from "../../../model/location";
 import {Problem} from "../../../model/Problem";
 import {Problemservice} from "../../service/problemService/problemservice";
+import {ProblemformComponent} from "../problemform/problemform.component";
 
 @Component({
   selector: 'app-map',
@@ -13,6 +14,7 @@ import {Problemservice} from "../../service/problemService/problemservice";
 
 export class MapComponent implements OnInit {
   @Input() problem: Problem = null;
+  isActive: boolean=true;
 
   constructor(public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
@@ -23,6 +25,7 @@ export class MapComponent implements OnInit {
     this.mapsApiLoader.load().then(() => {
       this.geocoder = new google.maps.Geocoder();
     });
+
   }
 
   geocoder: any;
@@ -49,6 +52,10 @@ export class MapComponent implements OnInit {
     this.problemsLocations = new Array<Location>();
 
   }
+  onClick(){
+    this.isActive=false;
+  }
+
 
   onPrint(property: any) {
     console.log(property);
