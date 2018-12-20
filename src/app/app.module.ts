@@ -11,6 +11,8 @@ import {EventsComponent} from './components/events/events.component';
 import {EventFormComponent} from './components/events/event-form/event-form.component';
 import {InfoSideComponent} from "./components/info-side/info-side.component";
 import {ModalBasicComponent} from "./components/modal-basic/modal-basic.component";
+import { HeroesComponent } from './components/heroes/heroes.component';
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import {ModalBasicComponent} from "./components/modal-basic/modal-basic.componen
     ModalBasicComponent,
     EventsComponent,
     EventFormComponent,
+    HeroesComponent,
   ],
   imports: [
     BrowserModule,
