@@ -1,26 +1,37 @@
-<button>Додади настан</button>
-<!--<div >-->
-<!--<form autocomplete="off" novalidate [formGroup]="form">-->
-<!--<input type="text" formControlName="imeNaPole"/>-->
-<!--<button (click)="getValue()">Потврди настан</button>-->
-<!--</form>-->
-<!--</div>-->
 
 
-<div>
-  <h1>Листа на тековни настани</h1>
-  <ul class="events">
+<div class="container">
 
-    <li *ngFor="let event of events"
-        [class.selected]="event === selectedEvent"
-        (click)="onSelected(event)">
-      <h2>{{event.name}}</h2>
-      <div><span>Локација: </span>{{event.location}}</div>
-      <div><span>Датум: </span>{{event.date}}</div>
-      <div><span>Време: </span>{{event.time}}</div>
-      <div><span>Опис: </span>{{event.description}}</div>
-      <br/>
-    </li>
+  <div>
+    <h1>Листа на настани</h1>
 
-  </ul>
+    <button class="btn btn-info float-right" routerLink="/events/add">Додади настан</button>
+  </div>
+
+  <div class="card-columns">
+
+    <ul class="events">
+
+      <li *ngFor="let event of events"
+          (click)="onSelected(event)">
+
+        <div class="card flex-container" >
+          <img class="card-img-top img-fluid" src="{{event.image}}" alt="Card image cap">
+          <div class="card-body" style="align-content: center">
+            <h4 class="card-title">{{event.name}}</h4>
+            <p class="card-text">Датум: {{event.date}}</p>
+            <p class="card-text">Време: {{event.time}}</p>
+            <p class="card-text">{{event.description}}</p>
+
+
+          </div>
+        </div>
+
+
+      </li>
+    </ul>
+
+  </div>
+  <!-- /.card-columns -->
 </div>
+<!-- /.container -->

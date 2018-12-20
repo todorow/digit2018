@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Event} from '../Event';
+import {myEvent} from "../myEvent";
 import {EVENTS} from '../mock-events';
 
 @Component({
@@ -12,9 +12,14 @@ export class EventFormComponent implements OnInit {
   constructor() {
   }
 
-  addEvent = new Event();
+  addEvent = new myEvent();
 
-  addNewEvent(event: Event): void {
+  /*onFileChanged(event) {
+   console.log(event);
+    // const file = event.target.files[0]
+  }*/
+
+  addNewEvent(event: myEvent): void {
     event.id = EVENTS.length + 1;
     EVENTS.push(event);
 
@@ -23,6 +28,11 @@ export class EventFormComponent implements OnInit {
     }
   }
 
+  ///pocetok
+
+
+
+  /////kraj
   ngOnInit() {
   }
 
