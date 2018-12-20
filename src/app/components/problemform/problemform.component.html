@@ -4,21 +4,21 @@
 
 
       <label for="category">Избери категорија</label>
-      <select id="category" class="form-control" >
+      <select id="category" class="form-control" required="required" [(ngModel)]="currentProblem.category" >
         <option >Човек</option>
         <option>Животно</option>
         <option>Друго</option>
 
       </select>
       <label for="description"></label>
-      <textarea id="description" class="form-control" rows="4" placeholder="Пр. Опис на проблемот" [(ngModel)]="currentProblem.Description"></textarea>
+      <textarea id="description" class="form-control" required="required" rows="4" placeholder="Пр. Опис на проблемот" [(ngModel)]="currentProblem.description"></textarea>
     </div>
       <label>Слика </label><input type="file" (change)="onFileChanged($event)" ><br>
         <p>Локација (движете го црвенот пин на мапата)</p>
         <!--<input type="text" id="locationMarker" [value]="currentLocation">-->
         <label for="listOfItems">Листа на потребни работи(ставките одделете ги со запирка)</label>
-        <input type="text" id="listOfItems" [(ngModel)]="this.listItems">
-        <label for="privateInfo"><input type="checkbox"id="privateInfo">Дали се согласувате Вашите внесени податоци, да бидат објавени</label>
-        <button class="btn btn-danger text-light" > Додај проблем </button>
+        <input type="text" id="listOfItems" required="required"  [(ngModel)]="this.listItems">
+        <label for="privateInfo"><input type="checkbox" required="required" id="privateInfo" [(ngModel)]="currentProblem.privacy">Дали се согласувате Вашите внесени податоци, да бидат објавени</label>
+        <button type="submit" class="btn btn-danger text-light" (click)="onAddProblemClicked()" > Додај проблем </button>
     </div>
 </div>

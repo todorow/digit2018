@@ -1,20 +1,18 @@
 import {Injectable} from '@angular/core';
+import {Problem} from "../../../model/Problem";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class Problemservice {
-  location: string;
+  problems:Problem[]=[];
   constructor() {
   }
+addNewProblem(problem:Problem):void{
+    this.problems.push(problem);
+}
 
-  setCurrentLocation(location:string){
-    this.location=location;
-  }
-  getCurrentLocation():string{
-    return this.location;
-  }
 
 
 
