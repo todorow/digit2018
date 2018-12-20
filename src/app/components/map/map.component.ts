@@ -31,29 +31,33 @@ export class MapComponent implements OnInit {
   geocoder: any;
   circleRadius: number = 5000;
   problemsLocations: Array<Location>;
+  currentLocation:string;
+
   public location: Location = {
-    lat: 51.678418,
-    lng: 7.809007,
+    lat: 41.98883,
+    lng: 21.42164,
     marker: {
-      lat: 51.678418,
-      lng: 7.809007,
+      lat: 41.98883,
+      lng: 21.42164,
       draggable: true
     },
-    zoom: 5
+    zoom: 15
   };
 
   @ViewChild(AgmMap) map: AgmMap;
   @ViewChild(AgmCircle) circle: AgmCircle;
 
-
+  currentLocation=this.location.marker.lat+","+this.location.marker.lng;
   ngOnInit() {
     this.location.marker.draggable = true;
 
     this.problemsLocations = new Array<Location>();
 
   }
-  onClick(){
+
+  onClick(property:any){
     this.isActive=false;
+    console.log("this is message"+property);
   }
 
 

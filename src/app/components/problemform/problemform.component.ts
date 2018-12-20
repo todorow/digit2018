@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-problemform',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./problemform.component.css']
 })
 export class ProblemformComponent implements OnInit {
+@Input locationCoordinates:string;
+
 
   constructor() { }
 

@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import {MouseEvent} from "@agm/core";
 
 @Component({
   selector: 'app-info-side',
@@ -8,6 +9,7 @@ import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class InfoSideComponent implements OnInit {
   faCoffee = faMapMarkedAlt;
+  @Output() someEvent = new EventEmitter();
   constructor() {
   }
 
