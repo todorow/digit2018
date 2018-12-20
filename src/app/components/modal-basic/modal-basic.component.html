@@ -1,46 +1,46 @@
 <ng-template #content let-modal>
   <div class="container-modal">
-      <div class="modal-header">
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <h4 class="modal-title" id="modal-basic-title">НАЈАВЕТЕ СЕ</h4>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Е-адреса</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
         </div>
-        <div class="modal-body">
-          <form>
-              <h4 class="modal-title" id="modal-basic-title">Станете учесник!</h4>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Маил</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Лозинка</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Лозинка">
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Зачувај лозинка</label>
-              </div>
-            <div class="container-login">
-              <button type="button" class="btn btn-lg btn-info btn-block buttonLogin" (click)="modal.close('Save click')">Најави се</button>
-              <p>Заборави лозинка?</p>
-            </div>
-            <div class="icons-media">
-                <small>Или најави се со</small>
-                <div class="input-group">
-                  <a href="#" class="fb-logo"> <img src="../../../assets/Icons/facebook.png" alt="facebook-logo"></a>
-                  <a href="#"> <img src="../../../assets/Icons/google-plus.png" alt="facebook-logo"></a>
-                </div>
-            </div>
-            <div class="input-group register">
-              <p>Не си учесник?</p>
-              <p class="signIn">Регистрирај се!</p>
-            </div>
-          </form>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Лозинка</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Лозинка">
         </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Запомни ме</label>
+        </div>
+        <div class="container-login">
+          <button type="button" class="btn btn-lg btn-info btn-block buttonLogin" (click)="modal.close('Save click')">Најави ме</button>
+          <p>Заборави лозинка?</p>
+        </div>
+        <div class="icons-media">
+          <small>Или најави се со</small>
+          <div class="input-group">
+            <a href="#" class="fb-logo"> <img src="../../../assets/Icons/facebook.png" alt="facebook-logo"></a>
+            <a href="#"> <img src="../../../assets/Icons/google-plus.png" alt="facebook-logo"></a>
+          </div>
+        </div>
+        <div class="input-group register">
+          <p>Не сте регистрирани?</p>
+          <p class="signIn">Регистрирај се!</p>
+        </div>
+      </form>
+    </div>
   </div>
 </ng-template>
 
 <button class="btn btn-md btn-outline-light" (click)="open(content)" id="signInButton" >
-  <span><img src="../..//../assets/Icons/user.png" alt="login"></span> 
+  <span><img src="../..//../assets/Icons/user.png" alt="login"></span>
   Најави се
 </button>
