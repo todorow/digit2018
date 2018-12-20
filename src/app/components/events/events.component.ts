@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Event} from './Event';
+import {myEvent} from "./myEvent";
 import {EVENTS} from './mock-events';
 import {FormGroup} from '@angular/forms';
 
@@ -10,21 +10,18 @@ import {FormGroup} from '@angular/forms';
 })
 export class EventsComponent implements OnInit {
   events = EVENTS;
-  selectedEvent: Event;
+  selectedEvent: myEvent;
   isSelected = false;
   form: FormGroup;
 
   constructor() {
   }
 
-  /* constructor(private formBuilder: FormBuilder) {
-     this.form = this.formBuilder.group({imeNaPole: ['', Validators.required ] } );
-   }*/
 
   ngOnInit() {
   }
 
-  onSelected(event: Event): void {
+  onSelected(event: myEvent): void {
     this.selectedEvent = event;
   }
 
@@ -32,10 +29,5 @@ export class EventsComponent implements OnInit {
     return !this.isSelected;
   }
 
-  /*
-    gerValue() {
-      const inputValue = this.form.value;
-      console.log(inputValue.imeNaPole);
-    }
-  */
+
 }

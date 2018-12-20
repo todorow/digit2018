@@ -1,7 +1,29 @@
+<h1>Додади елемент</h1>
 <label>Име:</label><input [(ngModel)]="addEvent.name"><br>
 <label>Локација: </label><input [(ngModel)]="addEvent.location"><br>
+<label>Слика: </label>
+
+
+<!--<input-->
+  <!--style="display: none"-->
+  <!--type="file" (change)="onFileChanged($event)"-->
+  <!--#fileInput>-->
+<!--<button (click)="fileInput.click()">Select File</button>-->
+<!--<button (click)="onUpload()">Upload!</button>-->
+<label class="image-upload-container btn btn-bwm">
+  <span>Select Image</span>
+  <input #imageInput
+         type="file"
+         accept="image/*"
+         (change)="processFile(imageInput)">
+</label>
+
+
+
+<!--fhknfdvdknfkdf-->
+<br>
 <label>Датум: </label><input [(ngModel)]="addEvent.date"><br>
 <label>Време: </label><input [(ngModel)]="addEvent.time"><br>
 <label>Опис: </label><input [(ngModel)]="addEvent.description"><br>
-<button (click)="addNewEvent(addEvent)">Додади настан</button>
+<button (click)="addNewEvent(addEvent)"  routerLink="/events" >Додади настан</button>
 
