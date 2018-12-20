@@ -1,32 +1,25 @@
 export class Problem {
-  id: number;
-  private url: string;
-  private name: string;
-  private description: string;
-  private hidenData: string;
-  private location: Location;
-  private status: boolean;
-  private donorsId: Array<number>;
-  private detectorId: number;
-  private itemsNeeded: Array<string>;
+  id: string;
+   url: string;
+   name: string;
+   description: string;
+   hidenData: string;
+   location: Location;
+   status: boolean;
+   donorsId: Array<number>;
+   detectorId: number;
+   itemsNeeded: Array<string>;
 
 
-  constructor(url: string, name: string, description: string, hidenData: string, location: Location, status: boolean, detectorId: number, itemsNeeded: Array<string>) {
-    this.url = url;
-    this.name = name;
-    this.description = description;
-    this.hidenData = hidenData;
-    this.location = location;
-    this.status = status;
-    this.detectorId = detectorId;
-    this.itemsNeeded = itemsNeeded;
+  constructor() {
+
   }
 
-  get Id(): number {
+  get Id(): string {
     return this.id;
   }
 
-  set Id(value: number) {
+  set Id(value: string) {
     this.id = value;
   }
 
