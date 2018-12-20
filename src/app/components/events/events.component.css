@@ -53,3 +53,6 @@ Custom media queries
 @media (max-width: 950px) {
 
 }
+p{
+  margin:0px;
+}

@@ -12,15 +12,17 @@ export class EventFormComponent implements OnInit {
   constructor() {
   }
 
+  selectedFile : File = null;
   addEvent = new myEvent();
 
-  /*onFileChanged(event) {
-   console.log(event);
-    // const file = event.target.files[0]
-  }*/
+  onFileChanged(event) {
+    this.selectedFile = <File>event.target.files[0];
+  }
+
 
   addNewEvent(event: myEvent): void {
     event.id = EVENTS.length + 1;
+    event.image = 'assets/events/'+this.selectedFile.name;
     EVENTS.push(event);
 
     for (const item of EVENTS) {
@@ -28,11 +30,6 @@ export class EventFormComponent implements OnInit {
     }
   }
 
-  ///pocetok
-
-
-
-  /////kraj
   ngOnInit() {
   }
 
