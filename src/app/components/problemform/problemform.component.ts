@@ -1,4 +1,4 @@
-import {Component,  OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { Location } from '@angular/common';
 import {MarkerLocationServiceService} from "../../service/markerLocationService/marker-location-service.service";
@@ -11,6 +11,7 @@ import {Problemservice} from "../../service/problemService/problemservice";
   styleUrls: ['./problemform.component.css']
 })
 export class ProblemformComponent implements OnInit {
+  @Output() someEvent = new EventEmitter();
   currentLocation:string;
   currentProblem: Problem = new Problem();
   selectedFile : File = null;
@@ -40,9 +41,15 @@ export class ProblemformComponent implements OnInit {
     this.currentProblem.pictureUrl=this.urlToFile;
     this.currentProblem.status=-1;
     this.problemService.addNewProblem(this.currentProblem);
+    console.log(this.currentProblem);
+    this.someEvent.emit();
+    // this.onSaveProblem();
 
 
   }
+ /* onSaveProblem():EventEmitter{
+    return new EventEmitter();
 
+  }*/
 
 }

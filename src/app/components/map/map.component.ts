@@ -5,6 +5,7 @@ import {Location} from "../../../model/location";
 import {Problem} from "../../../model/Problem";
 import {Problemservice} from "../../service/problemService/problemservice";
 import {MarkerLocationServiceService} from "../../service/markerLocationService/marker-location-service.service";
+import {CircleLocation} from "../../../model/circle-location";
 
 
 @Component({
@@ -33,7 +34,7 @@ export class MapComponent implements OnInit {
 
   geocoder: any;
   circleRadius: number = 5000;
-  problemsLocations: Array<Location>;
+  problemsLocations: Array<CircleLocation>=[];
 
 
   public location: Location = {
@@ -62,18 +63,18 @@ export class MapComponent implements OnInit {
   onClick(property:any){
     this.isActive=false;
   }
-
+  onRefresh(property:any){
+    this.problemsLocations=this.problemServce.getOnlyId();
+    this.isActive=true;
+    console.log(this.problemsLocations);
+  }
 
   onPrint(property: any) {
     console.log(property);
 
   }
 
-  onSave() {
-    this.problemsLocations.push(new Location(this.location.marker.lat, this.location.marker.lng))
 
-
-  }
 
   markerDragEnd(m: any, $event: any) {
 
