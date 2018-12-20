@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./problemform.component.css']
 })
 export class ProblemformComponent implements OnInit {
-@Input locationCoordinates:string;
+// @Input locationCoordinates:string;
 
 
   constructor() { }

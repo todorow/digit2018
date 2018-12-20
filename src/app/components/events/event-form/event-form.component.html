@@ -4,23 +4,13 @@
 <label>Слика: </label>
 
 
-<!--<input-->
-  <!--style="display: none"-->
-  <!--type="file" (change)="onFileChanged($event)"-->
-  <!--#fileInput>-->
-<!--<button (click)="fileInput.click()">Select File</button>-->
-<!--<button (click)="onUpload()">Upload!</button>-->
-<label class="image-upload-container btn btn-bwm">
-  <span>Select Image</span>
-  <input #imageInput
-         type="file"
-         accept="image/*"
-         (change)="processFile(imageInput)">
-</label>
+<input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+<button (click)="onUpload()">Upload!</button>
 
-
-
-<!--fhknfdvdknfkdf-->
 <br>
 <label>Датум: </label><input [(ngModel)]="addEvent.date"><br>
 <label>Време: </label><input [(ngModel)]="addEvent.time"><br>

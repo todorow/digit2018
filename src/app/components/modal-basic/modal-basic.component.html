@@ -1,36 +1,40 @@
 <ng-template #content let-modal>
   <div class="container-modal">
       <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Станете учесник!</h4>
           <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <form>
-            <div class="form-group ">
-              <div class="input-group">
-                <!--<span class="input-group-addon"><img src="../../../assets/Icons/envelope.png"/></span>-->
-                <span><fa-icon [icon]="email"></fa-icon></span>
-                <input id="mail" class="form-control" type="email" placeholder="Email" name="dp">
+              <h4 class="modal-title" id="modal-basic-title">Станете учесник!</h4>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Маил</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
               </div>
-              <div class="input-group">
-                  <!--<span><img src="../../../assets/Icons/user-black.png"/></span>-->
-                  <span><fa-icon [icon]="pass"></fa-icon></span>
-                  <input id="email" class="form-control" type="password" placeholder="Password" name="dp">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Лозинка</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Лозинка">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Зачувај лозинка</label>
+              </div>
+            <div class="container-login">
+              <button type="button" class="btn btn-lg btn-info btn-block buttonLogin" (click)="modal.close('Save click')">Најави се</button>
+              <p>Заборави лозинка?</p>
+            </div>
+            <div class="icons-media">
+                <small>Или најави се со</small>
+                <div class="input-group">
+                  <a href="#" class="fb-logo"> <img src="../../../assets/Icons/facebook.png" alt="facebook-logo"></a>
+                  <a href="#"> <img src="../../../assets/Icons/google-plus.png" alt="facebook-logo"></a>
                 </div>
             </div>
-            <div class="input-group">
-                <div class="checkbox">
-                    <input type="checkbox">
-                    <label>Remember me</label>
-                </div>
+            <div class="input-group register">
+              <p>Не си учесник?</p>
+              <p class="signIn">Регистрирај се!</p>
             </div>
-
-            <div class="button-login">
-                <button type="button" class="btn btn-lg btn-info" (click)="modal.close('Save click')">Најави се</button>
-            </div>
-
           </form>
         </div>
   </div>

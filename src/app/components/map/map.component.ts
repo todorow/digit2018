@@ -47,7 +47,7 @@ export class MapComponent implements OnInit {
   @ViewChild(AgmMap) map: AgmMap;
   @ViewChild(AgmCircle) circle: AgmCircle;
 
-  currentLocation=this.location.marker.lat+","+this.location.marker.lng;
+  // currentLocation=this.location.marker.lat+","+this.location.marker.lng;
   ngOnInit() {
     this.location.marker.draggable = true;
 
