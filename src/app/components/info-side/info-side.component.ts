@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-info-side',
@@ -6,11 +7,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./info-side.component.css']
 })
 export class InfoSideComponent implements OnInit {
-
+  faCoffee = faMapMarkedAlt;
   constructor() {
   }
 
   ngOnInit() {
   }
+
 
 }

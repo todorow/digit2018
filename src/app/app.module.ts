@@ -12,6 +12,7 @@ import {EventFormComponent} from './components/events/event-form/event-form.comp
 import {InfoSideComponent} from "./components/info-side/info-side.component";
 import {ModalBasicComponent} from "./components/modal-basic/modal-basic.component";
 import { HeroesComponent } from './components/heroes/heroes.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
 
@@ -31,7 +32,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     AppRoutingModule,
     AgmCoreModule.forRoot({apiKey: 'AIzaSyCFYX9It5a3BkRXPtlb243kpkz9QEs37R8'}), // <---
     FormsModule, // <---
-    NgbModule.forRoot() // <---
+    NgbModule.forRoot(),
+    FontAwesomeModule// <---
   ],
   providers: [
     GoogleMapsAPIWrapper // <---

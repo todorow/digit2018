@@ -1,3 +1,37 @@
-.sebm-google-map-container {
+/*.sebm-google-map-container {
   height: 300px;
+}*/
+#containerForInfoAndForm{
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+#containerForMap{
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+#mapItSelf{
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  height: 100vh;
+}
+.size{
+  display: block;
+  height: available;
+}
+app-map{
+
+}
+app-info-side{
+  display: block;
+  height: 100vh;
+
+
 }

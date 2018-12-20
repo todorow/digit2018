@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="container-fluid ">
 
-  <div class="row  bg-danger" style="height: 100%">
-    <div class="col-2 " style="height: 100%">
-      <div class="btn bg-dark" (click)="onSave()">dasdasdas</div>
+  <div class="row " >
+    <div id="containerForInfoAndForm" class="col-3 ">
+      <app-info-side></app-info-side>
     </div>
-    <div class="col-10 " style="height: available">
-      <agm-map style="height: available" [(latitude)]="location.lat" [(longitude)]="location.lng"
+    <div id="containerForMap" class="col-9 " >
+      <agm-map id="mapItSelf" [(latitude)]="location.lat" [(longitude)]="location.lng"
                [(zoom)]="location.zoom" [disableDefaultUI]="false"
                [zoomControl]="true" [(fitBounds)]='location.viewport'>
         <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng"
