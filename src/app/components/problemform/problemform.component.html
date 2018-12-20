@@ -14,10 +14,10 @@
       <textarea id="description" class="form-control" rows="4" placeholder="Пр. Опис на проблемот"></textarea>
     </div>
         <label for="locationMarker">Локација (движете го црвенот пин на мапата)</label>
-        <input type="text" id="locationMarker">
+        <input type="text" id="locationMarker" [value]="currentLocation">
         <label for="listOfItems">Листа на потребни работи(ставките одделете ги со запирка)</label>
         <input type="text" id="listOfItems">
         <label for="privateInfo"><input type="checkbox"id="privateInfo">Дали се согласувате Вашите внесени податоци, да бидат објавени</label>
-        <button class="btn btn-success"> Зачувај </button>
+        <button class="btn btn-danger text-light" > Додај проблем </button>
     </div>
 </div>

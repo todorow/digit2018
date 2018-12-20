@@ -1,12 +1,12 @@
-import {Injectable} from '@angular/core';
-
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class Problemservice {
+export class MarkerLocationServiceService {
   location: string;
   constructor() {
+
   }
 
   setCurrentLocation(location:string){
@@ -15,7 +15,4 @@ export class Problemservice {
   getCurrentLocation():string{
     return this.location;
   }
-
-
-
 }

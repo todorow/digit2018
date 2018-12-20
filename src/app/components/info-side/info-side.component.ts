@@ -1,6 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
-import {MouseEvent} from "@agm/core";
 
 @Component({
   selector: 'app-info-side',

@@ -4,7 +4,8 @@ import {GoogleMapsAPIWrapper} from '@agm/core/services';
 import {Location} from "../../../model/location";
 import {Problem} from "../../../model/Problem";
 import {Problemservice} from "../../service/problemService/problemservice";
-import {ProblemformComponent} from "../problemform/problemform.component";
+import {MarkerLocationServiceService} from "../../service/markerLocationService/marker-location-service.service";
+
 
 @Component({
   selector: 'app-map',
@@ -15,10 +16,11 @@ import {ProblemformComponent} from "../problemform/problemform.component";
 export class MapComponent implements OnInit {
   @Input() problem: Problem = null;
   isActive: boolean=true;
+  markerLocation: string="41.98883,21.42164";
 
   constructor(public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
-              private wrapper: GoogleMapsAPIWrapper, private problemServce: Problemservice) {
+              private wrapper: GoogleMapsAPIWrapper, private problemServce: Problemservice,private markerLocationService: MarkerLocationServiceService) {
     this.mapsApiLoader = mapsApiLoader;
     this.zone = zone;
     this.wrapper = wrapper;
@@ -26,12 +28,13 @@ export class MapComponent implements OnInit {
       this.geocoder = new google.maps.Geocoder();
     });
 
+
   }
 
   geocoder: any;
   circleRadius: number = 5000;
   problemsLocations: Array<Location>;
-  currentLocation:string;
+
 
   public location: Location = {
     lat: 41.98883,
@@ -50,14 +53,14 @@ export class MapComponent implements OnInit {
   // currentLocation=this.location.marker.lat+","+this.location.marker.lng;
   ngOnInit() {
     this.location.marker.draggable = true;
-
-    this.problemsLocations = new Array<Location>();
+    this.markerLocation="41.98883,21.42164";
+    this.markerLocationService.setCurrentLocation(this.markerLocation);
+    this.problemsLocations = [];
 
   }
 
   onClick(property:any){
     this.isActive=false;
-    console.log("this is message"+property);
   }
 
 
@@ -73,8 +76,12 @@ export class MapComponent implements OnInit {
   }
 
   markerDragEnd(m: any, $event: any) {
+
     this.location.marker.lat = m.coords.lat;
     this.location.marker.lng = m.coords.lng;
+    this.markerLocation=m.coords.lat+","+m.coords.lng;
+    console.log(this.markerLocation);
+    this.markerLocationService.setCurrentLocation(this.markerLocation);
     this.findAddressByCoordinates();
   }
 
