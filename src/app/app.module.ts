@@ -17,6 +17,7 @@ import { ProblemformComponent } from './components/problemform/problemform.compo
 import { ModalRegistrationComponent } from './components/modal-basic/modal-registration/modal-registration.component';
 import { ModalSingupComponent } from './components/modal-basic/modal-singup/modal-singup.component';
 import { ModalAddProblemComponent } from './components/modal-basic/modal-add-problem/modal-add-problem.component';
+import { StoryComponent } from './components/story/story.component';
 
 
 
@@ -33,7 +34,8 @@ import { ModalAddProblemComponent } from './components/modal-basic/modal-add-pro
     ProblemformComponent,
     ModalRegistrationComponent,
     ModalSingupComponent,
-    ModalAddProblemComponent
+    ModalAddProblemComponent,
+    StoryComponent
   ],
   imports: [
     BrowserModule,
