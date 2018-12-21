@@ -1,0 +1,25 @@
+.card{
+  padding: 12px;
+  height: 100vh;
+  display: flex;
+}
+.button-problem{
+  justify-content: center;
+  margin-left: 25%;
+  margin-bottom: 30px;
+}
+
+.button-problem-size{
+  font-size: 20px;
+}
+
+.category {
+  margin-top: 10px;
+}
+.category > label{
+  margin-right: 10px;
+}
+
+.list-items{
+  margin-bottom: 30px;
+}
