@@ -21,7 +21,6 @@
   padding: 0;
   margin: 0;
   height: 54px;
-  z-index:1; /*Add this*/
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -30,6 +29,8 @@
 
 .nav-item{
   padding-top: 8px;
+  display:flex;
+  align-items: center;
 }
 
 .nav-item a{
@@ -49,6 +50,3 @@ ul{
 }
 
 
-/*.navbar-brand{*/
-  /**/
-/*}*/

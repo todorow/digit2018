@@ -1,5 +1,5 @@
 #pageContainer{
-  margin: 3.9% 0 0;
+  margin: 3.4% 0 0;
   left: 0;
   right: 0;
 
@@ -8,6 +8,7 @@
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  z-index: 9999;
 }
 
 @media screen and (max-width: 600px){

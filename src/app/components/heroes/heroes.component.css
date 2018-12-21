@@ -1,8 +1,9 @@
 body{
   margin-top:20px;
   background-color: #f4f6f9;
-
 }
+
+
 .card {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -16,13 +17,15 @@ body{
   position: relative;
   width: 100%;
   box-shadow: none;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .card .header {
   color: #424242;
   padding: 20px;
   position: relative;
   box-shadow: none;
+  border-bottom: 2px solid lightgray;
+;
 }
 .card .header h2 {
   color: #757575;
@@ -54,16 +57,19 @@ body{
   color: #424242;
   font-weight: 400;
   padding: 20px;
+
 }
 .new_friend_list li {
   margin-bottom: 20px;
+
 }
 
 
 .new_friend_list li .users_name {
   color: #424242;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 24px;
+
 }
 .new_friend_list li .users_name {
   margin-top: 15px;
@@ -85,6 +91,8 @@ a {
 @media screen and (max-width: 836px){
   .card{
     margin-top: 35px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -99,6 +107,8 @@ a {
   justify-content: center;
 }
 img:hover {
-  background-color: #464646;
   opacity: 10%;
+  /*background-image: url("~src/assets/Icons/detector-award.png");*/
+background-color: #464646;
 }
+
