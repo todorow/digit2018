@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Problem} from "../../../model/Problem";
 import {CircleLocation} from "../../../model/circle-location";
+import {PROBLEMS} from "../../../model/mock/mock-problems";
 
 
 @Injectable({
@@ -8,8 +9,7 @@ import {CircleLocation} from "../../../model/circle-location";
 })
 export class Problemservice {
 
-  problems: Problem[] = [];
-
+  problems: Problem[] = PROBLEMS;
   constructor() {
   }
 

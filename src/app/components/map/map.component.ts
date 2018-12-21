@@ -18,6 +18,7 @@ export class MapComponent implements OnInit {
   @Input() problem: Problem = null;
   isActive: boolean=true;
   markerLocation: string="41.98883,21.42164";
+  problemsLocations: Array<CircleLocation>=[];
 
   constructor(public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
@@ -25,7 +26,8 @@ export class MapComponent implements OnInit {
     this.mapsApiLoader = mapsApiLoader;
     this.zone = zone;
     this.wrapper = wrapper;
-    this.mapsApiLoader.load().then(() => {
+
+        this.mapsApiLoader.load().then(() => {
       this.geocoder = new google.maps.Geocoder();
     });
 
@@ -33,8 +35,8 @@ export class MapComponent implements OnInit {
   }
 
   geocoder: any;
-  circleRadius: number = 5000;
-  problemsLocations: Array<CircleLocation>=[];
+  circleRadius: number = 100;
+  // problemsLocations: Array<CircleLocation>=[];
 
 
   public location: Location = {
@@ -57,6 +59,7 @@ export class MapComponent implements OnInit {
     this.markerLocation="41.98883,21.42164";
     this.markerLocationService.setCurrentLocation(this.markerLocation);
     this.problemsLocations = this.problemServce.getOnlyId();
+    console.log(this.problemsLocations);
 
   }
 

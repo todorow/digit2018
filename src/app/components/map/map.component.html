@@ -18,17 +18,17 @@
         <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng"
                     [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)'></agm-marker>
 
-        <div *ngIf="problemsLocations!==undefined" >
-          {{console.log("i'm entering here")}}
-          <agm-circle *ngFor="let circle of problemsLocations" [latitude]="circle.lat" [longitude]="circle.lng"
-                      [(radius)]="circleRadius"
-                      [fillColor]="'red'"
-                      [circleDraggable]="false"
-                      [editable]="false" (circleClick)="onPrint($event)">
 
 
-          </agm-circle>
-        </div>
+        <agm-circle *ngFor="let circle of problemsLocations" [(latitude)]="circle.lat" [(longitude)]="circle.lgn"
+                    [(radius)]="circleRadius"
+                    [fillColor]="'red'"
+                    [circleDraggable]="false"
+                    [editable]="false" (circleClick)="onPrint($event)">
+
+
+        </agm-circle>
+
 
       </agm-map>
     </div>
