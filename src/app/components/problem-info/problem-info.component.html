@@ -1,21 +1,23 @@
 <div class="card">
   <div class="card-body">
+    <img class="card-img-top img-fluid card-img-height" src="{{problem.pictureUrl}}" alt="Card image cap">
     <div class="form-group">
-      <input type="text">
-      {{problem}}
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
+      <label >Kатегорија</label>
+      <label ><strong>{{problem.category}}</strong></label>
+      <label ></label>
+      <label>{{problem.description}}</label>
+    </div>
+    <label>Листа на потребни работи</label>
+    <ul>
+      <li *ngFor="let item of problem.itemsNeeded"></li>
+    </ul>
+
+    <div class="row">
+      <div class="col button-problem">
+        <button class="btn btn-danger text-light p-3 shadow button-problem-size"  >
+          Помогни
+        </button>
+      </div>
     </div>
   </div>
 </div>
-
