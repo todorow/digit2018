@@ -93,6 +93,10 @@ export class MapComponent implements OnInit {
 
 
   }
+  onExit(property:any){
+    this.isActive=1;
+
+  }
 
 
 
