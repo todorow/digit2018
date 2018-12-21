@@ -14,7 +14,7 @@ export class Problemservice {
   }
 
   addNewProblem(problem: Problem): void {
-    this.problems.push(problem);
+    PROBLEMS.push(problem);
   }
 
   getAllProblems(): Problem[] {
@@ -22,18 +22,26 @@ export class Problemservice {
 
   }
 
-  getProblemById(id: string) {
-    for (let problem of this.problems) {
-      if (problem.id === id) {
-        return problem;
+  getProblemById(id: any):any {
+    console.log(id);
+    console.log(PROBLEMS);
+    let lista :string[]=[];
+    for (let a of PROBLEMS) {
+      console.log(a.id);
+      lista=a.id.split(",");
+      let mock:string=parseFloat(lista[0]).toFixed(2)+","+parseFloat(lista[1]).toFixed(2);
+      if (mock == id) {
+
+        return a;
       }
-      return null;
+
     }
+    return null;
   }
 
   getOnlyId(): CircleLocation[] {
     let myList: CircleLocation[] = [];
-    for (let problem of this.problems) {
+    for (let problem of PROBLEMS) {
       let list: string[] = problem.id.split(',');
       myList.push(new CircleLocation(list[0], list[1]));
     }

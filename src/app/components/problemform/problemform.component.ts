@@ -37,6 +37,8 @@ export class ProblemformComponent implements OnInit {
   onAddProblemClicked():void{
     this.getCurrentLocation();
     this.currentProblem.id=this.currentLocation;
+    let lista=this.currentLocation.split(",");
+
     this.currentProblem.itemsNeeded=this.listItems.split(',');
     this.currentProblem.pictureUrl=this.urlToFile;
     this.currentProblem.status=-1;

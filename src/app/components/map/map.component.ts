@@ -75,14 +75,20 @@ export class MapComponent implements OnInit {
   onClick(property:any){
     this.isActive=0;
   }
-  onRefresh(property:any){
+    onRefresh(property:any){
     this.problemsLocations=this.problemServce.getOnlyId();
     this.isActive=1;
     console.log(property);
   }
 
   onPrint(property: any) {
-    this.currentProblem=this.problemServce.getProblemById(property.latitude+","+property.longitude);
+    //parseFloat(num).toFixed(2);
+    this.currentProblem=this.problemServce.getProblemById(parseFloat(property.coords.lat).toFixed(2)+","+parseFloat(property.coords.lng).toFixed(2));
+    // this.currentProblem=this.problemServce.getProblemById(property.coords.lat+","+property.coords.lng);
+    /*console.log(property.coords);
+    console.log(property.coords.lat+","+property.coords.lng);
+    */// console.log(this.problemServce.getProblemById(property.coords.lat+","+property.coords.lng));
+   // console.log(this.problemServce.getAllProblems());
     this.isActive=2;
 
 
