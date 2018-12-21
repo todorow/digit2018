@@ -1,16 +1,9 @@
 body {margin:2rem;}
+.container{
 
-/*
-####################################################
-M E D I A  Q U E R I E S
-####################################################
-*/
-
-/*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Bootstrap 4 breakpoints
-*/
-
+  display: flex;
+  flex-direction: column;
+}
 /*
 Extra small devices (portrait phones, less than 544px)
 No media query since this is the default in Bootstrap because it is "mobile first"
@@ -30,24 +23,17 @@ The navbar toggle appears at this breakpoint */
     flex-direction: row;
   }
 }
-
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
 }
-
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
 }
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
-
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Custom media queries

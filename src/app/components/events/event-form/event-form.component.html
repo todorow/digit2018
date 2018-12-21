@@ -1,14 +1,17 @@
 
 <div class="container ">
-  <h1>Додади елемент</h1>
+  <h1>Додади настан</h1>
   <div class="form-group" >
-    <label>Име </label><input class="form-control" [(ngModel)]="addEvent.name" required="required"><br>
-    <label>Локација </label><input class="form-control" [(ngModel)]="addEvent.location" required><br>
+    <label>Име </label><input class="form-control" [(ngModel)]="addEvent.name" required="required">
+    <label>Локација </label><input class="form-control" [(ngModel)]="addEvent.location" required>
 
-    <label>Датум </label><input class="form-control"  type="date" [(ngModel)]="addEvent.date" required><br>
-    <label>Време </label><input class="form-control" type="time" [(ngModel)]="addEvent.time" required ><br>
-    <label>Опис </label><textarea class="form-control" [(ngModel)]="addEvent.description" required></textarea><br>
-    <label>Прикачи слика</label><input type="file" (change)="onFileChanged($event)" class="uploadPic" required><br>
+    <label>Датум </label><input class="form-control"  type="date" [(ngModel)]="addEvent.date" required>
+    <label>Време </label><input class="form-control" type="time" [(ngModel)]="addEvent.time" required >
+    <label>Опис </label><textarea class="form-control" [(ngModel)]="addEvent.description" required></textarea>
+    <div class="container-files">
+      <label>Прикачи слика</label><input type="file" (change)="onFileChanged($event)" class="uploadPic" required>
+    </div>
+
     <button (click)="addNewEvent(addEvent)"  routerLink="/events" class="btn btn-block btn-lg btn-info buttonAddEvent">Додади настан</button>
   </div>
 

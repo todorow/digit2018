@@ -1,0 +1,19 @@
+.card{
+  font-size: 16px;
+  padding: 12px;
+  height: 100vh;
+  display: flex;
+}
+
+.card-body{
+  padding: 8px;
+}
+button-problem{
+  justify-content: center;
+  margin-left: 25%;
+  margin-bottom: 30px;
+}
+
+.button-problem-size{
+  font-size: 20px;
+}
