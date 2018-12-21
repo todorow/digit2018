@@ -6,6 +6,7 @@ import {Problem} from "../../../model/Problem";
 import {Problemservice} from "../../service/problemService/problemservice";
 import {MarkerLocationServiceService} from "../../service/markerLocationService/marker-location-service.service";
 import {CircleLocation} from "../../../model/circle-location";
+import {ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -20,7 +21,7 @@ export class MapComponent implements OnInit {
   markerLocation: string="41.98883,21.42164";
   problemsLocations: Array<CircleLocation>=[];
 
-  constructor(public mapsApiLoader: MapsAPILoader,
+  constructor( private route: ActivatedRoute,public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
               private wrapper: GoogleMapsAPIWrapper, private problemServce: Problemservice,private markerLocationService: MarkerLocationServiceService) {
     this.mapsApiLoader = mapsApiLoader;
@@ -37,7 +38,13 @@ export class MapComponent implements OnInit {
   geocoder: any;
   circleRadius: number = 100;
   // problemsLocations: Array<CircleLocation>=[];
-
+  checkStatus():any{
+    const id = +this.route.snapshot.paramMap.get('index');
+    console.log(id);
+    if(id==1){
+      this.isActive=false;
+    }
+  }
 
   public location: Location = {
     lat: 41.98883,
@@ -59,6 +66,7 @@ export class MapComponent implements OnInit {
     this.markerLocation="41.98883,21.42164";
     this.markerLocationService.setCurrentLocation(this.markerLocation);
     this.problemsLocations = this.problemServce.getOnlyId();
+    this.checkStatus();
     console.log(this.problemsLocations);
 
   }

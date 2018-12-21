@@ -12,7 +12,7 @@ const routes: Routes = [
     redirectTo: 'home'
   },
   {path:'home',component:MapComponent},
-  {path:'detect',component:MapComponent},
+  {path:'detect/:index',component:MapComponent},
   {path:'events',component:EventsComponent},
   {path:'heroes',component:HeroesComponent},
   {path:'events/add',component:EventFormComponent},
