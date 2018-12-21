@@ -25,9 +25,9 @@ export class EventFormComponent implements OnInit {
     event.image = 'assets/events/'+this.selectedFile.name;
     EVENTS.push(event);
 
-    for (const item of EVENTS) {
-      console.log(item);
-    }
+    // for (const item of EVENTS) {
+    //   console.log(item);
+    // }
   }
 
   ngOnInit() {

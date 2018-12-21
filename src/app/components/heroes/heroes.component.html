@@ -1,3 +1,45 @@
-<p>
-  heroes works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-6">
+      <div class="card">
+        <div class="header">
+          <h2><strong>Детектори</strong></h2>
+        </div>
+        <div class="body">
+          <ul class="new_friend_list list-unstyled row">
+            <ng-container *ngFor="let user of users">
+              <li class="col-lg-4 col-md-2 col-sm-6 col-4" *ngIf="user.isVisible&&(user.typeUser==1||user.typeUser==3)" >
+                <a href="" >
+                  <img src="{{user.image}}" class="img-thumbnail" alt="User Image">
+                  <h6 class="users_name">{{user.name}}</h6>
+                  <small class="join_date">{{user.lastName}}</small>
+                </a>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+      <div class="card">
+        <div class="header">
+          <h2><strong>Донатори</strong></h2>
+        </div>
+        <div class="body">
+          <ul class="new_friend_list list-unstyled row">
+           <ng-container *ngFor="let user of users">
+             <li class="col-lg-4 col-md-2 col-sm-6 col-4" *ngIf="user.isVisible&&(user.typeUser==2||user.typeUser==3)" >
+               <a href="" >
+                 <img src="{{user.image}}" class="img-thumbnail" alt="User Image">
+                 <h6 class="users_name">{{user.name}}</h6>
+                 <small class="join_date">{{user.lastName}}</small>
+               </a>
+             </li>
+           </ng-container>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

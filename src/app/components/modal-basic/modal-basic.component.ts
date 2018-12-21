@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {USERS} from "../../../model/mock/mock-users";
+import {User} from "../../../model/user";
 
 @Component({
   selector: 'app-modal-basic',
@@ -11,6 +13,9 @@ export class ModalBasicComponent implements OnInit {
   closeResult: string;
   email = faEnvelope;
   pass = faLock;
+  newUser = new User();
+
+
   constructor(private modalService: NgbModal) {}
 
   open(content:any) {
@@ -30,6 +35,15 @@ export class ModalBasicComponent implements OnInit {
     } else {
       return  `with: ${reason}`;
     }
+
+
+  }
+  public daliNajaven(): boolean {
+      // let flag = true;
+      // while(flag){
+      //   if()
+      // }
+    return true;
   }
 
   ngOnInit(){
