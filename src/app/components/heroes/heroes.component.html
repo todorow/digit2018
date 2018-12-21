@@ -1,10 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12 col-lg-6">
+    <div class="col-md-12 col-lg-6 v1">
       <div class="card">
         <div class="header">
           <h2><strong>Детектори</strong></h2>
+          <hr/>
         </div>
+
         <div class="body">
           <ul class="new_friend_list list-unstyled row">
             <ng-container *ngFor="let user of users">
@@ -26,7 +28,9 @@
       <div class="card">
         <div class="header">
           <h2><strong>Донатори</strong></h2>
+          <hr/>
         </div>
+
         <div class="body">
           <ul class="new_friend_list list-unstyled row">
            <ng-container *ngFor="let user of users">
@@ -40,13 +44,11 @@
                </a>
              </li>
            </ng-container>
-
           </ul>
         </div>
       </div>
     </div>
   </div>
-
   <app-story></app-story>
 </div>
 

@@ -27,7 +27,6 @@ body{
   padding: 20px;
   position: relative;
   box-shadow: none;
-  border-bottom: 2px solid lightgray;
 ;
 }
 .card .header h2 {
@@ -115,3 +114,14 @@ img:hover {
 background-color: #464646;
 }
 
+hr{
+  border-bottom: 4px solid #17a2b8;
+  border-radius: 3px;
+  width: 50px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 40px;
+}
+.v1{
+  border-right: 1px solid #464646;
+}
