@@ -1,8 +1,11 @@
 body{
-  margin-top:20px;
+  margin-top: 20px;
   background-color: #f4f6f9;
+  margin-bottom: 0px;
 }
-
+.container{
+  margin-bottom: 80px;
+}
 
 .card {
   -moz-transition: all 0.5s;
@@ -17,7 +20,7 @@ body{
   position: relative;
   width: 100%;
   box-shadow: none;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .card .header {
   color: #424242;
