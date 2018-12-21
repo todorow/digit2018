@@ -9,7 +9,7 @@ import { STORIES } from "../../../model/mock/mock-stories";
 })
 export class StoryComponent implements OnInit {
 
-  stories: STORIES;
+  stories = STORIES;
   constructor() { }
 
   ngOnInit() {
