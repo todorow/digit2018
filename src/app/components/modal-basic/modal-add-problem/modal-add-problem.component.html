@@ -6,45 +6,18 @@
       </button>
     </div>
     <div class="modal-body">
-      <form>
-        <h4 class="modal-title d-flex justify-content-center" id="modal-basic-title"></h4>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Е-адреса</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Лозинка</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Лозинка">
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Запомни ме</label>
-        </div>
-        <div class="container-login">
-          <button type="button" class="btn btn-lg btn-info btn-block buttonLogin" (click)="modal.close('Save click')">Најави ме</button>
-          <app-modal-registration></app-modal-registration>
-        </div>
-        <div class="icons-media">
-          <small>Или најави се со</small>
-          <div class="input-group">
-            <a href="#" class="fb-logo"> <img src="../../../assets/Icons/facebook.png" alt="facebook-logo"></a>
-            <a href="#"> <img src="../../../assets/Icons/google-plus.png" alt="facebook-logo"></a>
-          </div>
-        </div>
-        <div class="input-group register">
-          <div>
-            <p>Не сте регистрирани? <app-modal-singup></app-modal-singup></p>
-          </div>
+      <div class="card">
+        <div class="card-body">
+          {{problem.description}}
 
         </div>
-      </form>
+      </div>
+
     </div>
   </div>
 </ng-template>
 
-<div >
-  <button class="btn btn-md btn-outline-light" (click)="open(content)" id="signInButton" >
-    <span><img src="../..//../assets/Icons/user.png" alt="login"></span>
-    Најави се
-  </button>
-</div>
+<button class="btn btn-md btn-outline-light" (click)="open(content)"  >
+  problem
+</button>
+

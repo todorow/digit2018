@@ -1,22 +1,29 @@
 <div class="container-fluid ">
 
   <div class="row " >
-    <div  *ngIf="isActive" id="containerForInfoAndForm" class="col-3 ">
+    <div  *ngIf="isActive===1" id="containerForInfoAndForm" class="col-3 ">
       <app-info-side (someEvent)="onClick()"  ></app-info-side>
 
 
     </div>
-    <div  *ngIf="!isActive" class="containerForInfoAndForm col-3 ">
+    <div  *ngIf="isActive===0" class="containerForInfoAndForm col-3 ">
 
       <app-problemform (someEvent)="onRefresh($event)"></app-problemform>
 
     </div>
+    <div  *ngIf="isActive===2" class="containerForInfoAndForm col-3 ">
+
+      <app-problem-info [(problem)]="currentProblem"></app-problem-info>
+    </div>
+
     <div id="containerForMap" class="col-9 " >
       <agm-map id="mapItSelf" [(latitude)]="location.lat" [(longitude)]="location.lng"
                [(zoom)]="location.zoom" [disableDefaultUI]="false"
                [zoomControl]="true" [(fitBounds)]='location.viewport'>
         <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng"
-                    [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)'></agm-marker>
+                    [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)' >
+
+         </agm-marker>
 
 
 
@@ -27,8 +34,8 @@
                     [editable]="false" (circleClick)="onPrint($event)">
 
 
-        </agm-circle>
 
+        </agm-circle>
 
       </agm-map>
     </div>

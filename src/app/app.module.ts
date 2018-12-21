@@ -18,6 +18,7 @@ import { ModalRegistrationComponent } from './components/modal-basic/modal-regis
 import { ModalSingupComponent } from './components/modal-basic/modal-singup/modal-singup.component';
 import { ModalAddProblemComponent } from './components/modal-basic/modal-add-problem/modal-add-problem.component';
 import { StoryComponent } from './components/story/story.component';
+import { ProblemInfoComponent } from './components/problem-info/problem-info.component';
 
 
 
@@ -35,7 +36,9 @@ import { StoryComponent } from './components/story/story.component';
     ModalRegistrationComponent,
     ModalSingupComponent,
     ModalAddProblemComponent,
-    StoryComponent
+    StoryComponent,
+    ModalAddProblemComponent,
+    ProblemInfoComponent
   ],
   imports: [
     BrowserModule,

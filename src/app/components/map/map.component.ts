@@ -17,9 +17,10 @@ import {ActivatedRoute} from "@angular/router";
 
 export class MapComponent implements OnInit {
   @Input() problem: Problem = null;
-  isActive: boolean=true;
+  isActive: number=1;
   markerLocation: string="41.98883,21.42164";
   problemsLocations: Array<CircleLocation>=[];
+  currentProblem:Problem;
 
   constructor( private route: ActivatedRoute,public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
@@ -42,7 +43,7 @@ export class MapComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('index');
     console.log(id);
     if(id==1){
-      this.isActive=false;
+      this.isActive=0;
     }
   }
 
@@ -72,16 +73,18 @@ export class MapComponent implements OnInit {
   }
 
   onClick(property:any){
-    this.isActive=false;
+    this.isActive=0;
   }
   onRefresh(property:any){
     this.problemsLocations=this.problemServce.getOnlyId();
-    this.isActive=true;
+    this.isActive=1;
     console.log(property);
   }
 
   onPrint(property: any) {
-    console.log(property);
+    this.currentProblem=this.problemServce.getProblemById(property.latitude+","+property.longitude);
+    this.isActive=2;
+
 
   }
 
