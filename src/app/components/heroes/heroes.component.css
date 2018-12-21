@@ -123,5 +123,9 @@ hr{
   margin-bottom: 40px;
 }
 .v1{
-  border-right: 1px solid #464646;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.v2{
+  border-bottom: 1px solid lightgray;
 }
