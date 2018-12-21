@@ -37,7 +37,7 @@ export class MapComponent implements OnInit {
   }
 
   geocoder: any;
-  circleRadius: number = 100;
+  circleRadius: number = 800;
   // problemsLocations: Array<CircleLocation>=[];
   checkStatus():any{
     const id = +this.route.snapshot.paramMap.get('index');
@@ -55,7 +55,7 @@ export class MapComponent implements OnInit {
       lng: 21.42164,
       draggable: true
     },
-    zoom: 15
+    zoom: 10
   };
 
   @ViewChild(AgmMap) map: AgmMap;
