@@ -1,5 +1,5 @@
 .card{
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px;
   height: 100vh;
   display: flex;
@@ -8,7 +8,18 @@
 .card-body{
   padding: 8px;
 }
-button-problem{
+
+label{
+  margin-bottom: 10px;
+}
+
+.row{
+  margin-top: 15px;
+}
+.col{
+  margin-top: 10px;
+}
+.button-problem{
   justify-content: center;
   margin-left: 25%;
   margin-bottom: 30px;
@@ -16,4 +27,21 @@ button-problem{
 
 .button-problem-size{
   font-size: 20px;
+}
+
+.uploadPic{
+  margin-left: 20px;
+}
+.container-files{
+  margin-top: 20px;
+  display: flex;
+
+}
+
+input{
+  margin-bottom: 10px;
+}
+
+.infoApproval{
+  margin-top: 10px;
 }

@@ -1,6 +1,7 @@
 body{
   margin-top:20px;
   background-color: #f4f6f9;
+
 }
 .card {
   -moz-transition: all 0.5s;
@@ -15,6 +16,7 @@ body{
   position: relative;
   width: 100%;
   box-shadow: none;
+  margin-top: 20px;
 }
 .card .header {
   color: #424242;
@@ -26,11 +28,12 @@ body{
   color: #757575;
   position: relative;
 }
-.card .header h2:before {
-  background: #6572b8;
-}
+/*.card .header h2:before {*/
+  /*background: #6572b8;*/
+  /*height: 100px;*/
+/*}*/
 .card .header h2 {
-  font-size: 15px;
+  font-size: 30px;
 }
 .card .header h2::before {
   position: absolute;
@@ -40,9 +43,9 @@ body{
   top: 0;
   content: '';
 }
-.theme-purple .card .header h2 strong {
-  color: #6572b8;
-}
+/*.theme-purple .card .header h2 strong {*/
+  /*color: #6572b8;*/
+/*}*/
 .card .header h2 small {
   color: #9e9e9e;
   line-height: 15px;
@@ -52,16 +55,18 @@ body{
   font-weight: 400;
   padding: 20px;
 }
-.new_friend_list {
-  margin-bottom: 0px;
+.new_friend_list li {
+  margin-bottom: 20px;
 }
+
 
 .new_friend_list li .users_name {
   color: #424242;
   text-transform: capitalize;
+  font-size: 18px;
 }
 .new_friend_list li .users_name {
-  margin-top: 5px;
+  margin-top: 15px;
 }
 .new_friend_list li .users_name{
   margin-bottom: 0px;
@@ -77,3 +82,23 @@ a {
   background-color: transparent;
 }
 
+@media screen and (max-width: 836px){
+  .card{
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 456px){
+  .card{
+    margin-top: 40px;
+  }
+}
+
+.info-user{
+  display: grid;
+  justify-content: center;
+}
+img:hover {
+  background-color: #464646;
+  opacity: 10%;
+}
