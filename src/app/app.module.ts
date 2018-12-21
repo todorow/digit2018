@@ -16,6 +16,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { ProblemformComponent } from './components/problemform/problemform.component';
 import { ModalRegistrationComponent } from './components/modal-basic/modal-registration/modal-registration.component';
 import { ModalSingupComponent } from './components/modal-basic/modal-singup/modal-singup.component';
+import { ModalAddProblemComponent } from './components/modal-basic/modal-add-problem/modal-add-problem.component';
 
 
 
@@ -31,7 +32,8 @@ import { ModalSingupComponent } from './components/modal-basic/modal-singup/moda
     HeroesComponent,
     ProblemformComponent,
     ModalRegistrationComponent,
-    ModalSingupComponent
+    ModalSingupComponent,
+    ModalAddProblemComponent
   ],
   imports: [
     BrowserModule,

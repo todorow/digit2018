@@ -1,4 +1,3 @@
-
 import {Problem} from "../Problem";
 
 export let PROBLEMS: Problem[]=[
