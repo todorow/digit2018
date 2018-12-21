@@ -32,7 +32,7 @@ export class ProblemformComponent implements OnInit {
   }
   onFileChanged(event) {
     this.selectedFile = <File>event.target.files[0];
-    this.urlToFile='assets/events/'+this.selectedFile.name;
+    this.urlToFile='~/DIGIT/src/assets/events/'+this.selectedFile.name;
   }
   onAddProblemClicked():void{
     this.getCurrentLocation();
@@ -40,7 +40,7 @@ export class ProblemformComponent implements OnInit {
     let lista=this.currentLocation.split(",");
 
     this.currentProblem.itemsNeeded=this.listItems.split(',');
-    this.currentProblem.pictureUrl=this.urlToFile;
+    this.currentProblem.pictureUrl="http://cdn.akc.org/content/article-body-image/housetrain_adult_dog_hero.jpg";
     this.currentProblem.status=-1;
     this.problemService.addNewProblem(this.currentProblem);
     console.log(this.currentProblem);
