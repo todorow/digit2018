@@ -2,7 +2,7 @@
 
   <div class="row " >
     <div  *ngIf="isActive===1" id="containerForInfoAndForm" class="col-3 ">
-      <app-info-side (someEvent)="onClick()"  ></app-info-side>
+      <app-info-side (someEvent)="onClick($event)"  ></app-info-side>
 
 
     </div>
@@ -13,7 +13,7 @@
     </div>
     <div  *ngIf="isActive===2" class="containerForInfoAndForm col-3 ">
 
-      <app-problem-info [(problem)]="currentProblem"></app-problem-info>
+      <app-problem-info [(problem)]="currentProblem" (someEvent)="onExit($event)"></app-problem-info>
     </div>
 
     <div id="containerForMap" class="col-9 " >

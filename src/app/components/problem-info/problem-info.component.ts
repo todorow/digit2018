@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Problem} from "../../../model/Problem";
 
 @Component({
@@ -8,10 +8,13 @@ import {Problem} from "../../../model/Problem";
 })
 export class ProblemInfoComponent implements OnInit {
 @Input() problem:Problem=null;
+  @Output() someEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
 
   }
-
+onClick():void{
+  this.someEvent.emit(this.problem);
+}
 }
