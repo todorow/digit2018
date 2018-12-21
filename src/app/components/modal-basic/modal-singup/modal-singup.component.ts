@@ -1,14 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-
+import { Component, OnInit } from '@angular/core';
+import {faEnvelope, faLock} from "@fortawesome/free-solid-svg-icons";
+import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-modal-basic',
-  templateUrl: './modal-basic.component.html',
-  styleUrls: ['./modal-basic.component.css']
+  selector: 'app-modal-singup',
+  templateUrl: './modal-singup.component.html',
+  styleUrls: ['./modal-singup.component.css']
 })
-export class ModalBasicComponent implements OnInit {
+export class ModalSingupComponent implements OnInit {
   closeResult: string;
   email = faEnvelope;
   pass = faLock;
@@ -41,5 +40,6 @@ export class ModalBasicComponent implements OnInit {
   ngOnInit(){
 
   }
+
 
 }

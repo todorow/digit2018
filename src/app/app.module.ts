@@ -14,6 +14,8 @@ import {ModalBasicComponent} from "./components/modal-basic/modal-basic.componen
 import { HeroesComponent } from './components/heroes/heroes.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { ProblemformComponent } from './components/problemform/problemform.component';
+import { ModalRegistrationComponent } from './components/modal-basic/modal-registration/modal-registration.component';
+import { ModalSingupComponent } from './components/modal-basic/modal-singup/modal-singup.component';
 
 
 
@@ -27,7 +29,9 @@ import { ProblemformComponent } from './components/problemform/problemform.compo
     EventsComponent,
     EventFormComponent,
     HeroesComponent,
-    ProblemformComponent
+    ProblemformComponent,
+    ModalRegistrationComponent,
+    ModalSingupComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
     </div>
     <div class="modal-body">
       <form>
-        <h4 class="modal-title" id="modal-basic-title">НАЈАВЕТЕ СЕ</h4>
+        <h4 class="modal-title d-flex justify-content-center" id="modal-basic-title">НАЈАВЕТЕ СЕ</h4>
         <div class="form-group">
           <label for="exampleInputEmail1">Е-адреса</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
@@ -22,7 +22,7 @@
         </div>
         <div class="container-login">
           <button type="button" class="btn btn-lg btn-info btn-block buttonLogin" (click)="modal.close('Save click')">Најави ме</button>
-          <p>Заборави лозинка?</p>
+          <app-modal-registration></app-modal-registration>
         </div>
         <div class="icons-media">
           <small>Или најави се со</small>
@@ -32,15 +32,19 @@
           </div>
         </div>
         <div class="input-group register">
-          <p>Не сте регистрирани?</p>
-          <p class="signIn">Регистрирај се!</p>
+          <div>
+            <p>Не сте регистрирани? <app-modal-singup></app-modal-singup></p>
+          </div>
+
         </div>
       </form>
     </div>
   </div>
 </ng-template>
 
-<button class="btn btn-md btn-outline-light" (click)="open(content)" id="signInButton" >
-  <span><img src="../..//../assets/Icons/user.png" alt="login"></span>
-  Најави се
-</button>
+<div >
+  <button class="btn btn-md btn-outline-light" (click)="open(content)" id="signInButton" >
+    <span><img src="../..//../assets/Icons/user.png" alt="login"></span>
+    Најави се
+  </button>
+</div>

@@ -16,6 +16,7 @@ const routes: Routes = [
   {path:'events',component:EventsComponent},
   {path:'heroes',component:HeroesComponent},
   {path:'events/add',component:EventFormComponent},
+
 ];
 
 @NgModule({

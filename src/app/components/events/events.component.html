@@ -1,32 +1,31 @@
 <div class="container">
-  <div class="events-title">
-    <h1>Листа на настани</h1>
-    <button class="btn btn-md btn-info " routerLink="/events/add">Додади настан</button>
-  </div>
+    <div class="events-title">
+      <h1>Листа на настани</h1>
+      <button class="btn btn-md btn-info " routerLink="/events/add">Додади настан</button>
+    </div>
 
-  <div class="card-columns">
+    <div class="card-columns">
 
-    <ul class="events">
+      <ul class="events">
 
-      <li *ngFor="let event of events"
-          (click)="onSelected(event)">
+        <li *ngFor="let event of events"
+            (click)="onSelected(event)">
 
-        <div class="card flex-container card-height" >
-          <img class="card-img-top img-fluid card-img-height" src="{{event.image}}" alt="Card image cap">
-          <div class="card-body" style="align-content: center; line-height: 28px">
-            <h4 class="card-title d-flex justify-content-center">{{event.name}}</h4>
-            <p class="card-text"><strong>Датум:</strong> {{event.date}}</p>
-            <p class="card-text"><strong>Време:</strong> {{event.time}}</p>
-            <p class="card-text"><strong>Локација: </strong>  {{event.location}}</p>
-            <p class="card-text"><strong>Опис: </strong> {{event.description}}</p>
+          <div class="card flex-container card-height" >
+            <img class="card-img-top img-fluid card-img-height" src="{{event.image}}" alt="Card image cap">
+            <div class="card-body" style="align-content: center; line-height: 28px">
+              <h4 class="card-title d-flex justify-content-center">{{event.name}}</h4>
+              <p class="card-text"><strong>Датум:</strong> {{event.date}}</p>
+              <p class="card-text"><strong>Време:</strong> {{event.time}}</p>
+              <p class="card-text"><strong>Локација: </strong>  {{event.location}}</p>
+              <p class="card-text"><strong>Опис: </strong> {{event.description}}</p>
+            </div>
           </div>
-        </div>
 
 
-      </li>
-    </ul>
+        </li>
+      </ul>
 
-  </div>
-  <!-- /.card-columns -->
+    </div>
 </div>
 <!-- /.container -->
