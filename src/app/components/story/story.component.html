@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-6">
+        <h2><strong>Успешни приказни</strong></h2>
+        <ngb-accordion *ngFor="let story of stories">
+          <ngb-panel id="toggle">
+              <template>
+                <span>{{story.name}}</span>
+              </template>
+              <template ngbPanelContent>
+                {{story.description}}
+              </template>
+          </ngb-panel>
+        </ngb-accordion>
+  </div>
+</div>
