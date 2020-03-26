@@ -13,21 +13,21 @@
     </div>
     <div  *ngIf="isActive===2" class="containerForInfoAndForm col-3 ">
 
-      <app-problem-info [(problem)]="currentProblem" (someEvent)="onExit($event)"></app-problem-info>
+      <app-problem-info [problem]="currentProblem" (someEvent)="onExit($event)"></app-problem-info>
     </div>
 
     <div id="containerForMap" class="col-9 " >
-      <agm-map id="mapItSelf" [(latitude)]="location.lat" [(longitude)]="location.lng"
+      <agm-map id="mapItSelf" [latitude]="location.lat" [longitude]="location.lng"
                [(zoom)]="location.zoom" [disableDefaultUI]="false"
-               [zoomControl]="true" [(fitBounds)]='location.viewport'>
-        <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng"
+               [zoomControl]="true" [fitBounds]='location.viewport'>
+        <agm-marker [latitude]="location.marker.lat" [longitude]="location.marker.lng"
                     [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)' >
 
          </agm-marker>
 
 
 
-        <agm-circle *ngFor="let circle of problemsLocations" [(latitude)]="circle.lat" [(longitude)]="circle.lgn"
+        <agm-circle *ngFor="let circle of problemsLocations" [latitude]="circle.lat" [longitude]="circle.lgn"
                     [(radius)]="circleRadius"
                     [fillColor]="'red'"
                     [circleDraggable]="false"
@@ -42,10 +42,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-

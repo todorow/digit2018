@@ -12,6 +12,7 @@ export class ModalBasicComponent implements OnInit {
   closeResult: string;
   email = faEnvelope;
   pass = faLock;
+  modal: NgbModal;
 
 
   constructor(private modalService: NgbModal) {}

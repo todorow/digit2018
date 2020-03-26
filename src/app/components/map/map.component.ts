@@ -88,12 +88,10 @@ export class MapComponent implements OnInit {
   }
 
 
-
-  markerDragEnd(m: any, $event: any) {
-
-    this.location.marker.lat = m.coords.lat;
-    this.location.marker.lng = m.coords.lng;
-    this.markerLocation=m.coords.lat+","+m.coords.lng;
+  markerDragEnd(marker: any) {
+    this.location.marker.lat = marker.coords.lat;
+    this.location.marker.lng = marker.coords.lng;
+    this.markerLocation=marker.coords.lat+","+marker.coords.lng;
     this.markerLocationService.setCurrentLocation(this.markerLocation);
     this.findAddressByCoordinates();
   }
