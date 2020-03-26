@@ -1,6 +1,5 @@
 import {Component, Input, NgZone, OnInit, ViewChild} from '@angular/core';
-import {AgmCircle, AgmMap, MapsAPILoader} from '@agm/core';
-import {GoogleMapsAPIWrapper} from '@agm/core/services';
+import { AgmCircle, AgmMap, GoogleMapsAPIWrapper, MapsAPILoader } from '@agm/core';
 import {Location} from "../../../model/location";
 import {Problem} from "../../../model/Problem";
 import {Problemservice} from "../../service/problemService/problemservice";
@@ -24,7 +23,9 @@ export class MapComponent implements OnInit {
 
   constructor( private route: ActivatedRoute,public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
-              private wrapper: GoogleMapsAPIWrapper, private problemServce: Problemservice,private markerLocationService: MarkerLocationServiceService) {
+              private wrapper: GoogleMapsAPIWrapper,
+               private problemServce: Problemservice,
+               private markerLocationService: MarkerLocationServiceService) {
     this.mapsApiLoader = mapsApiLoader;
     this.zone = zone;
     this.wrapper = wrapper;
