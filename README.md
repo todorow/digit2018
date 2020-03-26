@@ -1,5 +1,4 @@
-![Node.js CI](https://github.com/todorow/digit2018/workflows/Node.js%20CI/badge.svg?branch=master)
-# Digit
+# Digit ![Node.js CI](https://github.com/todorow/digit2018/workflows/Node.js%20CI/badge.svg?branch=master)
 web site for social movement
 ###### [live demo](https://todorow.github.io/digit2018/digit) 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0
