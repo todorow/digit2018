@@ -1,4 +1,4 @@
-
+![Node.js CI](https://github.com/todorow/digit2018/workflows/Node.js%20CI/badge.svg?branch=master)
 # Digit
 web site for social movement
 
