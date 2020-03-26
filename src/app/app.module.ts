@@ -45,7 +45,7 @@ import { ProblemInfoComponent } from './components/problem-info/problem-info.com
     AppRoutingModule,
     AgmCoreModule.forRoot({apiKey: 'AIzaSyCFYX9It5a3BkRXPtlb243kpkz9QEs37R8'}), // <---
     FormsModule, // <---
-    NgbModule.forRoot(),
+    NgbModule,
     FontAwesomeModule// <---
   ],
   providers: [
