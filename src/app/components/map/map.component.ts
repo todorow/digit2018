@@ -2,8 +2,8 @@ import {Component, Input, NgZone, OnInit, ViewChild} from '@angular/core';
 import { AgmCircle, AgmMap, GoogleMapsAPIWrapper, MapsAPILoader } from '@agm/core';
 import {Location} from "../../../model/location";
 import {Problem} from "../../../model/Problem";
-import {Problemservice} from "../../service/problemService/problemservice";
-import {MarkerLocationServiceService} from "../../service/markerLocationService/marker-location-service.service";
+import {ProblemService} from "../../service/problem-service/problem.service";
+import {MarkerLocationService} from "../../service/marker-location-service/marker-location.service";
 import {CircleLocation} from "../../../model/circle-location";
 import {ActivatedRoute} from "@angular/router";
 
@@ -24,8 +24,8 @@ export class MapComponent implements OnInit {
   constructor( private route: ActivatedRoute,public mapsApiLoader: MapsAPILoader,
               private zone: NgZone,
               private wrapper: GoogleMapsAPIWrapper,
-               private problemServce: Problemservice,
-               private markerLocationService: MarkerLocationServiceService) {
+               private problemServce: ProblemService,
+               private markerLocationService: MarkerLocationService) {
     this.mapsApiLoader = mapsApiLoader;
     this.zone = zone;
     this.wrapper = wrapper;
@@ -39,10 +39,8 @@ export class MapComponent implements OnInit {
 
   geocoder: any;
   circleRadius: number = 800;
-  // problemsLocations: Array<CircleLocation>=[];
   checkStatus():any{
     const id = +this.route.snapshot.paramMap.get('index');
-    console.log(id);
     if(id==1){
       this.isActive=0;
     }
@@ -62,15 +60,12 @@ export class MapComponent implements OnInit {
   @ViewChild(AgmMap) map: AgmMap;
   @ViewChild(AgmCircle) circle: AgmCircle;
 
-  // currentLocation=this.location.marker.lat+","+this.location.marker.lng;
   ngOnInit() {
     this.location.marker.draggable = true;
     this.markerLocation="41.98883,21.42164";
     this.markerLocationService.setCurrentLocation(this.markerLocation);
     this.problemsLocations = this.problemServce.getOnlyId();
     this.checkStatus();
-    console.log(this.problemsLocations);
-
   }
 
   onClick(property:any){
@@ -79,17 +74,10 @@ export class MapComponent implements OnInit {
     onRefresh(property:any){
     this.problemsLocations=this.problemServce.getOnlyId();
     this.isActive=1;
-    console.log(property);
   }
 
   onPrint(property: any) {
-    //parseFloat(num).toFixed(2);
     this.currentProblem=this.problemServce.getProblemById(parseFloat(property.coords.lat).toFixed(2)+","+parseFloat(property.coords.lng).toFixed(2));
-    // this.currentProblem=this.problemServce.getProblemById(property.coords.lat+","+property.coords.lng);
-    /*console.log(property.coords);
-    console.log(property.coords.lat+","+property.coords.lng);
-    */// console.log(this.problemServce.getProblemById(property.coords.lat+","+property.coords.lng));
-   // console.log(this.problemServce.getAllProblems());
     this.isActive=2;
 
 
@@ -106,7 +94,6 @@ export class MapComponent implements OnInit {
     this.location.marker.lat = m.coords.lat;
     this.location.marker.lng = m.coords.lng;
     this.markerLocation=m.coords.lat+","+m.coords.lng;
-    console.log(this.markerLocation);
     this.markerLocationService.setCurrentLocation(this.markerLocation);
     this.findAddressByCoordinates();
   }
@@ -127,7 +114,7 @@ export class MapComponent implements OnInit {
     let address = addressArray[0].address_components;
 
     for (let element of address) {
-      if (element.length == 0 && !element['types']) continue
+      if (element.length == 0 && !element['types']) continue;
 
       if (element['types'].indexOf('street_number') > -1) {
         this.location.address_level_1 = element['long_name'];
@@ -151,7 +138,6 @@ export class MapComponent implements OnInit {
       }
       if (element['types'].indexOf('postal_code') > -1) {
         this.location.address_zip = element['long_name'];
-        continue;
       }
     }
   }

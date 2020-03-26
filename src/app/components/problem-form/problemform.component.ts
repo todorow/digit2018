@@ -1,9 +1,9 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { Location } from '@angular/common';
-import {MarkerLocationServiceService} from "../../service/markerLocationService/marker-location-service.service";
+import {MarkerLocationService} from "../../service/marker-location-service/marker-location.service";
 import {Problem} from "../../../model/Problem";
-import {Problemservice} from "../../service/problemService/problemservice";
+import {ProblemService} from "../../service/problem-service/problem.service";
 
 @Component({
   selector: 'app-problemform',
@@ -22,7 +22,7 @@ export class ProblemformComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute, private location: Location,private markerLocationService: MarkerLocationServiceService, private problemService: Problemservice) { }
+  constructor(private route: ActivatedRoute, private location: Location, private markerLocationService: MarkerLocationService, private problemService: ProblemService) { }
 
   ngOnInit() {
 

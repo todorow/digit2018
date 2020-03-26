@@ -7,9 +7,10 @@ import {PROBLEMS} from "../../../model/mock/mock-problems";
 @Injectable({
   providedIn: 'root'
 })
-export class Problemservice {
+export class ProblemService {
 
   problems: Problem[] = PROBLEMS;
+
   constructor() {
   }
 
@@ -23,15 +24,12 @@ export class Problemservice {
   }
 
   getProblemById(id: any):any {
-    console.log(id);
-    console.log(PROBLEMS);
-    let lista :string[]=[];
+    let strings :string[]=[];
     for (let a of PROBLEMS) {
-      console.log(a.id);
-      lista=a.id.split(",");
-      let mock:string=parseFloat(lista[0]).toFixed(2)+","+parseFloat(lista[1]).toFixed(2);
+      strings = a.id.split(",");
+      let mock:string = parseFloat(strings[0]).toFixed(2)+","+parseFloat(strings[1])
+        .toFixed(2);
       if (mock == id) {
-
         return a;
       }
 
@@ -47,15 +45,6 @@ export class Problemservice {
     }
     return myList;
   }
-
-  /*let pr:{ category: string; description: string; id: string; itemsNeeded: string[]; pictureUrl: string; privacy: boolean; status: number }={ "category": "Човек",
-    "description": "Трајче за оваа зима нема доволно дрва, на трајче му се потребни уште 3 кубика дрва.↵број за контакт 072 552-***",
-    "id": "41.98883,21.42164",
-    "itemsNeeded": ["3 кубика дрва"],
-    "pictureUrl": "assets/events/1200px-Stray_dogs_crosswalk.jpg",
-    "privacy": true,
-    "status": -1*/
-// }
 
 }
 

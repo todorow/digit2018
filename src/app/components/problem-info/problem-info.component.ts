@@ -7,14 +7,15 @@ import {Problem} from "../../../model/Problem";
   styleUrls: ['./problem-info.component.css']
 })
 export class ProblemInfoComponent implements OnInit {
-@Input() problem:Problem=null;
+  @Input() problem:Problem = null;
   @Output() someEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
 
   }
-onClick():void{
-  this.someEvent.emit(this.problem);
-}
+
+  onClick(): void {
+    this.someEvent.emit(this.problem);
+  }
 }
